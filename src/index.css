@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --swiper-theme-color: #2570e9;
+}
+
+body {
+  @apply font-sans text-gray-800 bg-gray-50;
+}
+
+.container {
+  @apply px-4 mx-auto max-w-7xl;
+}
+
+.section-title {
+  @apply mb-8 text-3xl font-bold text-center font-display md:text-4xl;
+}
+
+.section-subtitle {
+  @apply max-w-2xl mx-auto mb-12 text-lg text-center text-gray-600;
+}
+
+.luxury-title {
+  @apply font-script text-luxury-gold text-4xl md:text-5xl mb-4 text-center;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 font-medium transition-colors rounded-lg;
+}
+
+.btn-primary {
+  @apply text-white bg-primary-600 hover:bg-primary-700;
+}
+
+.btn-secondary {
+  @apply text-primary-700 bg-primary-50 hover:bg-primary-100;
+}
+
+.btn-accent {
+  @apply text-white bg-accent hover:bg-accent-dark;
+}
+
+.btn-luxury {
+  @apply text-white bg-luxury-burgundy hover:bg-opacity-90;
+}
+
+.btn-gold {
+  @apply text-white bg-luxury-gold hover:bg-opacity-90;
+}
+
+.card {
+  @apply overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg;
+}
+
+.luxury-card {
+  @apply overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-xl border border-luxury-gold/20;
+}
+
+.nav-link {
+  @apply px-3 py-2 text-gray-600 transition-colors rounded-md hover:text-primary-600 hover:bg-primary-50;
+}
+
+.nav-link.active {
+  @apply text-primary-600 bg-primary-50;
+}
+
+.search-input {
+  @apply w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full hover:bg-gray-500;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet-active {
+  @apply bg-primary-600;
+}
+
+.destination-card:hover img {
+  transform: scale(1.05);
+}
+
+.destination-card img {
+  transition: transform 0.5s ease;
+}
+
+/* Luxury elements */
+.gold-border {
+  @apply border-2 border-luxury-gold;
+}
+
+.gold-text {
+  @apply text-luxury-gold;
+}
+
+.luxury-gradient {
+  background: linear-gradient(135deg, #f6f0ea 0%, #fff 50%, #f6f0ea 100%);
+}
+
+.luxury-shadow {
+  box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.1), 0 8px 10px -6px rgba(212, 175, 55, 0.1);
+}
+
+.elegant-divider {
+  @apply relative flex py-5 items-center;
+}
+
+.elegant-divider::before,
+.elegant-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #d4af37;
+}
+
+.elegant-divider::before {
+  margin-right: 0.5em;
+}
+
+.elegant-divider::after {
+  margin-left: 0.5em;
+}
+
+/* Modern travel homepage */
+.hero-gradient {
+  background: linear-gradient(120deg, #e0f7fa 0%, #bbdefb 100%);
+}
+
+.travel-card {
+  @apply overflow-hidden transition-all duration-300 bg-white rounded-xl shadow-md hover:shadow-xl border-t-4 border-primary-500;
+}
+
+.feature-icon-container {
+  @apply flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 mb-4 mx-auto;
+}
+
+.dotted-path {
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232570e9' fill-opacity='0.3'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.search-box {
+  @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100;
+}
+
+.search-box-item {
+  @apply flex items-center border-r border-gray-200 px-4 py-2;
+}
+
+.search-box-item:last-child {
+  @apply border-r-0;
+}
+
+.floating-elements {
+  position: relative;
+}
+
+.floating-element {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.floating-element-1 {
+  top: 10%;
+  left: 10%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.floating-element-2 {
+  top: 20%;
+  right: 15%;
+  animation: float 10s ease-in-out infinite;
+}
+
+.floating-element-3 {
+  bottom: 15%;
+  left: 20%;
+  animation: float 12s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
